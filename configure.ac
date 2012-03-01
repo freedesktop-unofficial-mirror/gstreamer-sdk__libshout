@@ -38,6 +38,19 @@ AM_PROG_LIBTOOL
 
 dnl Set some options based on environment
 
+AC_MSG_CHECKING([for Win32])
+case "$host" in
+  *-*-mingw*)
+    os_win32=yes
+    LDFLAGS="$LDFLAGS -no-undefined"
+    ;;
+  *)
+    os_win32=no
+    ;;
+esac
+AC_MSG_RESULT([$os_win32])
+AM_CONDITIONAL(OS_WIN32, [test $os_win32 = yes])
+
 dnl openbsd headers break when _XOPEN_SOURCE is defined but without it seems
 dnl to be fine
 case "$ac_cv_host" in

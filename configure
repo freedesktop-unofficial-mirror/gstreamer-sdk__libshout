@@ -18681,6 +18681,28 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 
 
 
+echo "$as_me:$LINENO: checking for Win32..." >&5
+echo $ECHO_N "checking for Win32... $ECHO_C" >&6
+case "$host" in
+  *-*-mingw*)
+    os_win32=yes
+    LDFLAGS="$LDFLAGS -no-undefined"
+    ;;
+  *)
+    os_win32=no
+    ;;
+esac
+
+
+if test $os_win32 = yes; then
+  OS_WIN32_TRUE=
+  OS_WIN32_FALSE='#'
+else
+  OS_WIN32_TRUE='#'
+  OS_WIN32_FALSE=
+fi
+
+
 
 
 
