@@ -21813,7 +21813,7 @@ cat >>confdefs.h <<\_ACEOF
 #define HAVE_WINSOCK2_H 1
 _ACEOF
 
-   LIBS="$LIBS -lwsock32"
+   LIBS="$LIBS -lws2_32"
 fi
 
 
