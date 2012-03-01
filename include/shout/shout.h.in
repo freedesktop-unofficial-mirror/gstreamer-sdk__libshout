@@ -22,7 +22,7 @@
 #define __LIBSHOUT_SHOUT_H__
 
 #include <sys/types.h>
-#ifdef WIN32
+#ifdef _MSC_VER
 #include <os.h>
 #endif
 
